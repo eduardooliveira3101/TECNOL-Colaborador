@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECNOL | Educacional</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img class="logo" src="./Logo-tecnol-secundária.gif" alt="" />
+        <nav>
+          <button class="nav-btn active" data-section="home">Home</button>
+          <button class="nav-btn" data-section="solos">Solos</button>
+          <button class="nav-btn" data-section="concreto">Concreto</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Seção Home -->
+      <section id="home" class="section active">
+        <div class="container">
+          <div class="welcome-container">
+            <h2 class="welcome-text">Boas vindas!</h2>
+            <p class="welcome-subtitle">
+              É ótimo ter você aqui como um dos nossos colaboradores
+            </p>
+            <div class="welcome-animation">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <p class="welcome-content">
+              Bem-vindo ao nosso educacional. Aqui você encontrará informações
+              completas sobre solos, concreto e muito mais. Navegue pelos menus
+              acima para descobrir mais sobre cada categoria.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Solos -->
+      <section id="solos" class="section">
+        <div class="container">
+          <h2>Solos</h2>
+          <div class="content-grid">
+            <div class="card">
+              <a
+                class="card-link"
+                href="#"
+                data-category="solos"
+                data-video="https://www.youtube.com/embed/ysz5S6PUM-U"
+                data-title="Ensaio: Solo Argiloso"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f0f9c1b6f9b1d9d1a6b"
+                  alt="Obra solo argiloso"
+                />
+                <div class="card-body">
+                  <h3>Solo Argiloso</h3>
+                  <p>Ensaio de caracterização — Penetração e compactação</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+              <a
+                class="card-link"
+                href="#"
+                data-category="solos"
+                data-video="https://www.youtube.com/embed/ScMzIvxBSi4"
+                data-title="Ensaio: Solo Arenoso"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c7b8e7b0c9d"
+                  alt="Obra solo arenoso"
+                />
+                <div class="card-body">
+                  <h3>Solo Arenoso</h3>
+                  <p>Ensaio de granulometria e permeabilidade</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+              <a
+                class="card-link"
+                href="#"
+                data-category="solos"
+                data-video="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                data-title="Ensaio: Solo Siltoso"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a1d"
+                  alt="Obra solo siltoso"
+                />
+                <div class="card-body">
+                  <h3>Solo Siltoso</h3>
+                  <p>Ensaio de consistência e índice de vazios</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Concreto -->
+      <section id="concreto" class="section">
+        <div class="container">
+          <h2>Concreto</h2>
+          <div class="content-grid">
+            <div class="card">
+              <a
+                class="card-link"
+                href="#"
+                data-category="concreto"
+                data-video="https://www.youtube.com/embed/ScMzIvxBSi4"
+                data-title="Ensaio: Concreto Convencional"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1518976024611-4888a0f6c6e5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9d5c"
+                  alt="Obra concreto convencional"
+                />
+                <div class="card-body">
+                  <h3>Concreto Convencional</h3>
+                  <p>Ensaio de resistência à compressão (cubo/tubo)</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+              <a
+                class="card-link"
+                href="#"
+                data-category="concreto"
+                data-video="https://www.youtube.com/embed/ysz5S6PUM-U"
+                data-title="Ensaio: Concreto Armado"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c7b8e7b0c9d"
+                  alt="Obra concreto armado"
+                />
+                <div class="card-body">
+                  <h3>Concreto Armado</h3>
+                  <p>Ensaio de flexão e fissuração</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+              <a
+                class="card-link"
+                href="#"
+                data-category="concreto"
+                data-video="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                data-title="Ensaio: Concreto Aparente"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a2e"
+                  alt="Obra concreto aparente"
+                />
+                <div class="card-body">
+                  <h3>Concreto Aparente</h3>
+                  <p>Ensaio estético e acabamento superficial</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Vídeo -->
+      <section id="video" class="section">
+        <div class="container">
+          <button id="back-btn" class="nav-btn">Voltar</button>
+          <div class="breadcrumb" aria-label="Breadcrumb">
+            <a
+              href="#"
+              id="breadcrumb-category-link"
+              class="breadcrumb-link"
+            ></a>
+            <span class="breadcrumb-sep">›</span>
+            <span id="breadcrumb-title" class="breadcrumb-current"
+              >Assistir Ensaio</span
+            >
+          </div>
+          <h2 id="video-title" style="display: none">Assistir Ensaio</h2>
+          <div class="video-wrapper">
+            <iframe
+              id="video-player"
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>&copy; 2025 Tecnol. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
