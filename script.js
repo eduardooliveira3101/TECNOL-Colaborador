@@ -47,6 +47,35 @@ const backBtn = document.getElementById("back-btn");
 
 let currentCategory = null;
 
+// Função para extrair ID do YouTube de diferentes formatos de URL
+function getYouTubeEmbedUrl(url) {
+  let videoId = null;
+
+  // Formato: youtu.be/videoId
+  if (url.includes("youtu.be/")) {
+    videoId = url.split("youtu.be/")[1].split("?")[0].split("&")[0];
+  }
+  // Formato: youtube.com/watch?v=videoId
+  else if (url.includes("youtube.com/watch")) {
+    const params = new URL(url).searchParams;
+    videoId = params.get("v");
+  }
+  // Formato: youtube.com/embed/videoId
+  else if (url.includes("youtube.com/embed/")) {
+    videoId = url.split("youtube.com/embed/")[1].split("?")[0];
+  }
+
+  if (videoId) {
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    console.log("URL original:", url);
+    console.log("ID extraído:", videoId);
+    console.log("URL final:", embedUrl);
+    return embedUrl;
+  }
+  console.log("URL não reconhecida:", url);
+  return url; // Retorna URL original se não conseguir extrair ID
+}
+
 cardLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -56,7 +85,10 @@ cardLinks.forEach((link) => {
     currentCategory = category;
 
     // atualizar player e breadcrumb
-    if (videoPlayer) videoPlayer.src = src + "?rel=0&autoplay=1";
+    if (videoPlayer) {
+      const embedUrl = getYouTubeEmbedUrl(src);
+      videoPlayer.src = embedUrl;
+    }
     if (breadcrumbTitle) breadcrumbTitle.textContent = title;
     if (breadcrumbCategoryLink) {
       breadcrumbCategoryLink.textContent = category
