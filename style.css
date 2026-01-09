@@ -46,7 +46,7 @@ nav {
 }
 
 .logo {
-  height: 8em;
+  height: 7em;
 }
 
 .nav-btn {
@@ -230,8 +230,8 @@ main {
 .content-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 2em;
+  margin-bottom: 1em;
 }
 
 .card {
